@@ -1184,6 +1184,8 @@ returns true if plugin should continue with sending AJAX request, false will abo
 
                 } else {
                     if ($(properties.sAddDeleteToolbarSelector).length == 0) {
+                        //  we are not using as is.
+                        return false;
                         throw "Cannot find a button with an id '" + properties.sAddNewRowButtonId + "', or placeholder with an id '" + properties.sAddDeleteToolbarSelector + "' that should be used for adding new row although form for adding new record is specified";
                     } else {
                         oAddNewRowButton = null; //It will be auto-generated later
